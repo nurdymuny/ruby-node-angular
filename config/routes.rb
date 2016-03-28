@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   root 'home#edit', via: [:get]
   match "xmlformat" => "home#xmlformat", as: :xml_format, via: [:get]
 
-  resources :purchases
+  resources :purchases do
+  	member do
+      get :xml_format
+    end
+  end
 end

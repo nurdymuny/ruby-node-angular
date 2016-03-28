@@ -1,0 +1,19 @@
+<div class="col-md-3 nested-fields">
+	<div class='form-group'>
+		<%= f.label :partnumber %>
+		<%= f.text_field :partnumber, class: 'form-control' %>
+	</div>
+	<div class='form-group'>
+		<%= f.label :productname %>
+		<%= f.text_field :productname, class: 'form-control' %>
+	</div>
+	<div class='form-group'>
+		<%= f.label :usdprice %>
+		<%= f.text_field :usdprice, class: 'form-control' %>
+	</div>
+	<div class='form-group'>
+		<%= f.label :comment %>
+		<%= f.text_field :comment, class: 'form-control' %>
+	</div>
+	<%= link_to_remove_association "remove Item", f %>
+</div>

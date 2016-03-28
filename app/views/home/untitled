@@ -1,0 +1,31 @@
+   <%= f.fields_for :billing do |s| %>
+   <div class="form-group">
+    <label for="name">shippinName</label>
+    <!-- <input type="text" ng-model="shipingName" class="form-control"> -->
+    <%= s.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label for="name">shippingStreet</label>
+    <!-- <input type="text" ng-model="shippingStreet" class="form-control"> -->
+    <%= s.text_field :street, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label for="name">shippingCity</label>
+    <!-- <input type="text" ng-model="shippingCity" class="form-control"> -->
+    <%= s.text_field :city, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label for="name">shippingState</label>
+    <!-- <input type="text" ng-model="shippingState" class="form-control"> -->
+    <%= s.text_field :state, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label for="name">shippingZip</label>
+    <!-- <input type="text" ng-model="shippingZip" class="form-control"> -->
+    <%= s.text_field :zip, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label for="name">shippingCountry</label>
+    <!-- <input type="text" ng-model="shippingCountry" class="form-control"> -->
+    <%= s.text_field :country, class: 'form-control' %>
+  </div>

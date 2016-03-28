@@ -2,12 +2,12 @@ class Item
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :PartNumber, String
-  field :ProductName, String
-  field :Quantity, Float
-  field :USPrice, Decimal
-  field :Comment, Text
-  field :ShipDate, DateTime
+  field :partnumber, :type => String
+  field :productname, :type => String
+  field :quantity, :type => Float
+  field :usdprice, :type => Float
+  field :comment, :type => String
+  field :shipdate, :type => DateTime
 
   belongs_to :purchase
 end
