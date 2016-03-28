@@ -1,0 +1,68 @@
+<div ng-app="myApp" ng-controller="formCtrl">
+	<form>
+	<%= form_for @purchase do |f| %>
+		<div class='col-md-12'>
+			<div class='col-md-6 text-center'>
+				<h2>Editor<h2>
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" ng-model="name" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="name">OrderNumber</label>
+					<input type="text" ng-model="PurchaseOrderNumber" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="name">OrderDate</label>
+					<input type="text" ng-model="OrderDate" class="form-control">
+				</div>
+			</div>
+			<div class='col-md-6 text-center'>
+					<h2>Shipping</h2>
+          <div class="form-group">
+            <label for="name">OrderDate</label>
+            <input type="text" ng-model="shipingName" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="name">OrderDate</label>
+            <input type="text" ng-model="shippingStreet" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="name">OrderDate</label>
+            <input type="text" ng-model="shippingCity" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="name">OrderDate</label>
+            <input type="text" ng-model="shippingState" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="name">OrderDate</label>
+            <input type="text" ng-model="shippingZip" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="name">OrderDate</label>
+            <input type="text" ng-model="shippingCountry" class="form-control">
+          </div>
+			</div>
+		</div>
+    <div class="col-md-12">
+      <%= fields_for :items do |f| %>
+        <%= render :partial => 'shared/items', locals: {f: f} %>
+        <div class="links">
+        <%= link_to_add_association 'add task', f, :items %>
+      </div>
+    <% end %>
+    </div>
+		<% end %>
+	</div>
+</div>
+<%= content_for :javascripts do %>
+<script>
+var app = angular.module('myApp', []);
+app.controller('formCtrl', function($scope) {
+	$scope.name = "";
+	$scope.PurchaseOrderNumber = "<%= Time.now.to_i %>";
+	$scope.OrderDate = "<%= Date.today %>";
+});
+</script>
+<% end %>

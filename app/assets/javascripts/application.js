@@ -11,6 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require underscore
+//= require socket.io
+//= require angular
+//= require angular-animate
+//= require angular-resource
+//= require cocoon
 //= require_tree .

@@ -1,0 +1,11 @@
+/Users/pebiantara/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20160326-6558-1snc0ei.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling native.c
+linking shared-object native.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 native.bundle ./.gem.20160326-6558-rijvvk
