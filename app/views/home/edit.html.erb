@@ -10,7 +10,7 @@
      <div class="form-group">
        <label for="name">OrderDate</label>
        <!-- <input type="text" ng-model="OrderDate" class="form-control"> -->
-       <%= f.text_field :orderdate, class: 'form-control' %>
+       <%= f.text_field :orderdate, class: 'form-control', :'ng-model' => 'OrderDate' %>
      </div>
    </div>
  </div>
@@ -46,6 +46,7 @@ App.controller('formCtrl',
   function get($scope, $http ) {
     $http.get('/xmlformat.json').then(
      function(res){
+      $scope.OrderDate = <%= Date.today %>;
       $scope.data = res.data;
     });
   }

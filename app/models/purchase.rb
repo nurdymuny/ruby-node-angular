@@ -10,6 +10,8 @@ class Purchase
   field :purchaseordernumber, type: String
   field :orderdate, type: Date
 
+  validates_presence_of :purchaseordernumber
+
   embeds_many :items,  class_name: 'Item'
   embeds_one :billing,  class_name: 'Billing'
   embeds_one :shipping,  class_name: 'Shipping'
@@ -19,7 +21,7 @@ class Purchase
   accepts_nested_attributes_for :shipping, :autosave => true
 
   def xml_format
-    my_json = self.to_json(:include => [:billing, :shipping, :items]) 
-    my_xml = JSON.parse(my_json).to_xml(:root => :my_root)
+    my_json = self.to_json#(:include => [:billing, :shipping, :items]) 
+    my_xml = JSON.parse(my_json).to_xml(:root => :purchase)
   end
 end
