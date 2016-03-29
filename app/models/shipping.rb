@@ -9,6 +9,6 @@ class Shipping
    field :zip, type: String
    field :country, type: String
 
-   belongs_to :purchase
+   belongs_to :purchase, autosave: true
 
 end

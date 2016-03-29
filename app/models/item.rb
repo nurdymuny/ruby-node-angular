@@ -9,5 +9,5 @@ class Item
   field :comment, :type => String
   field :shipdate, :type => DateTime
 
-  belongs_to :purchase
+  belongs_to :purchase, autosave: true
 end
