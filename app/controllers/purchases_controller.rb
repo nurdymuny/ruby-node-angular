@@ -20,8 +20,12 @@ class PurchasesController < ApplicationController
   end
 
   def xml_format
-    a  = Purchase.find(params[:id])
-    @xml = a.xml_format
+    begin
+      a  = Purchase.find(params[:id])
+      @xml = a.xml_format
+    rescue
+      @xml = nil
+    end
   end
 
   private
