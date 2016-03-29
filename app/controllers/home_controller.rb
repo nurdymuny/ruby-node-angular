@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def edit
-    @purchase = Purchase.first || Purchase.new
+    @purchase = (Purchase.first rescue nil) || Purchase.new
     @purchase.build_billing if @purchase.billing.nil?
     @purchase.build_shipping if @purchase.shipping.nil?
     @purchase.items.build if @purchase.items.empty?
@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   end
 
   def xmlformat
-    @purchase = Purchase.first || Purchase.new
+    @purchase = (Purchase.first rescue nil) || Purchase.new
     @purchase.build_billing if @purchase.billing.nil?
     @purchase.build_shipping if @purchase.shipping.nil?
     @purchase.items.build if @purchase.items.empty?
