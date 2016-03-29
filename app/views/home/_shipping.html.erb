@@ -1,0 +1,26 @@
+<%= f.fields_for :shipping do |s| %>
+<div class="form-group">
+  <label for="name">shippinName</label>
+  <%= s.text_field :name, {:'ng-model' => 'shippingname', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">shippingStreet</label>
+  <%= s.text_field :street, {:'ng-model' => 'shippingstreet', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">shippingCity</label>
+  <%= s.text_field :city, {:'ng-model' => 'shippingcity', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">shippingState</label>
+  <%= s.text_field :state, {:'ng-model' => 'shippingstate', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">shippingZip</label>
+  <%= s.text_field :zip, {:'ng-model' => 'shippingzip', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">shippingCountry</label>
+  <%= s.text_field :country, {:'ng-model' => 'shippingcountry', class: 'form-control'} %>
+</div>
+<% end %>

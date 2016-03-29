@@ -1,0 +1,26 @@
+<%= f.fields_for :billing do |s| %>
+<div class="form-group">
+  <label for="name">shippinName</label>
+  <%= s.text_field :name, {:'ng-model' => 'billingname', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">billingStreet</label>
+  <%= s.text_field :street, {:'ng-model' => 'billingstreet', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">billingCity</label>
+  <%= s.text_field :city, {:'ng-model' => 'billingcity', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">billingState</label>
+  <%= s.text_field :state, {:'ng-model' => 'billingstate', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">billingZip</label>
+  <%= s.text_field :zip, {:'ng-model' => 'billingzip', class: 'form-control'} %>
+</div>
+<div class="form-group">
+  <label for="name">billingCountry</label>
+  <%= s.text_field :country, {:'ng-model' => 'billingcountry', class: 'form-control'} %>
+</div>
+<% end %>
