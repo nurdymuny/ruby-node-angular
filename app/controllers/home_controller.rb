@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def edit
-    @purchase = (Purchase.first rescue nil) || Purchase.new
+    @purchase = Purchase.new
     @purchase.build_billing if @purchase.billing.nil?
     @purchase.build_shipping if @purchase.shipping.nil?
     @purchase.items.build if @purchase.items.empty?

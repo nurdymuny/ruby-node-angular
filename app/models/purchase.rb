@@ -10,9 +10,9 @@ class Purchase
   field :purchaseordernumber, type: String
   field :orderdate, type: Date
 
-  embeds_many :items, validate: true, class_name: 'Item'
-  embeds_one :billing, validate: true, class_name: 'Billing'
-  embeds_one :shipping, validate: true, class_name: 'Shipping'
+  embeds_many :items,  class_name: 'Item'
+  embeds_one :billing,  class_name: 'Billing'
+  embeds_one :shipping,  class_name: 'Shipping'
 
   accepts_nested_attributes_for :items, :autosave => true
   accepts_nested_attributes_for :billing, :autosave => true
