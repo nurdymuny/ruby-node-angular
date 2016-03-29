@@ -30,8 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rest-client'
 
 #mongoid
-# gem 'mongoid', '~> 5.1.0'
-gem 'mongoid-rails'
+gem 'mongoid', '~> 5.1.0'
+# gem 'mongoid-rails'
 
 #angular
 gem 'angularjs-rails', '~> 1.5'
