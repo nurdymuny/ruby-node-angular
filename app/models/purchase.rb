@@ -21,7 +21,7 @@ class Purchase
   accepts_nested_attributes_for :shipping, :autosave => true
 
   def xml_format
-    my_json = self.to_json#(:include => [:billing, :shipping, :items]) 
+    my_json = self.to_json(:include => [:billing, :shipping, :items]) 
     my_xml = JSON.parse(my_json).to_xml(:root => :purchase)
   end
 end
